@@ -4,7 +4,7 @@ export const data = [
     prenom: 'Alice',
     nom: 'Durand',
     date_de_naissance: '1985-03-12',
-    avatar: '/img/1.jpg',
+    avatar: '/img/1.png',
     numero_de_telephone: '+33 6 12 34 56 78',
     adresse_email: 'alice.durand@example.com',
     description:
@@ -15,7 +15,7 @@ export const data = [
     prenom: 'Bob',
     nom: 'Martin',
     date_de_naissance: '1990-07-25',
-    avatar: '/img/2.jpg',
+    avatar: '/img/2.png',
     numero_de_telephone: '+33 6 98 76 54 32',
     adresse_email: 'bob.martin@example.com',
     description:
@@ -26,7 +26,7 @@ export const data = [
     prenom: 'Caroline',
     nom: 'Lefebvre',
     date_de_naissance: '1988-11-18',
-    avatar: '/img/3.jpg',
+    avatar: '/img/3.png',
     numero_de_telephone: '+33 6 55 33 22 11',
     adresse_email: 'caroline.lefebvre@example.com',
     description:
@@ -37,7 +37,7 @@ export const data = [
     prenom: 'David',
     nom: 'Girard',
     date_de_naissance: '1979-05-03',
-    avatar: '/img/4.jpg',
+    avatar: '/img/4.png',
     numero_de_telephone: '+33 6 44 88 99 00',
     adresse_email: 'david.girard@example.com',
     description:
@@ -48,7 +48,7 @@ export const data = [
     prenom: 'Eva',
     nom: 'Dubois',
     date_de_naissance: '1995-09-30',
-    avatar: '/img/5.jpg',
+    avatar: '/img/5.png',
     numero_de_telephone: '+33 6 77 22 11 33',
     adresse_email: 'eva.dubois@example.com',
     description:
@@ -59,7 +59,7 @@ export const data = [
     prenom: 'Franck',
     nom: 'Moreau',
     date_de_naissance: '1982-02-15',
-    avatar: '/img/6.jpg',
+    avatar: '/img/6.png',
     numero_de_telephone: '+33 6 33 55 99 77',
     adresse_email: 'franck.moreau@example.com',
     description:
@@ -70,7 +70,7 @@ export const data = [
     prenom: 'Géraldine',
     nom: 'Richard',
     date_de_naissance: '1991-12-08',
-    avatar: '/img/7.jpg',
+    avatar: '/img/7.png',
     numero_de_telephone: '+33 6 11 22 33 44',
     adresse_email: 'geraldine.richard@example.com',
     description:
@@ -81,7 +81,7 @@ export const data = [
     prenom: 'Hugo',
     nom: 'Poirier',
     date_de_naissance: '1987-04-22',
-    avatar: '/img/8.jpg',
+    avatar: '/img/8.png',
     numero_de_telephone: '+33 6 66 77 88 99',
     adresse_email: 'hugo.poirier@example.com',
     description:
@@ -92,7 +92,7 @@ export const data = [
     prenom: 'Isabelle',
     nom: 'Roux',
     date_de_naissance: '1993-08-07',
-    avatar: '/img/9.jpg',
+    avatar: '/img/9.png',
     numero_de_telephone: '+33 6 44 33 22 11',
     adresse_email: 'isabelle.roux@example.com',
     description:
