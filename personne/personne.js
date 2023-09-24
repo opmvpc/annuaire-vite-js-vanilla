@@ -7,7 +7,7 @@ const detailsPersonne = () => {
   // récupération des paramètres GET de l'url
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const personneId = urlParams.get('id');
+  const personneId = urlParams.get('id') ?? 1;
   console.log(personneId);
 
   // on cherche la personne qui possède l'id trouvé dans l'url
@@ -17,7 +17,7 @@ const detailsPersonne = () => {
   console.log(personne);
 
   return `
-      <div class="card">
+      <div class="card col col-sm-10 col-md-8 col-xl-6 mx-auto">
         <img src="${personne.avatar}" class="card-img-top" alt="avatar de ${personne.prenom} ${personne.nom}">
         <div class="card-body">
           <h5 class="card-title">${personne.prenom} ${personne.nom}</h5>
