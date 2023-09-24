@@ -8,7 +8,7 @@ const listePersonnes = () => {
   for (let i = 0; i < data.length; i++) {
     const personne = data[i];
     let personneCard = `
-      <a class="card" href="/personne.html?id=${personne.id}">
+      <a class="card col-5 col-md-3" href="/personne.html?id=${personne.id}">
         <img src="${personne.avatar}" class="card-img-top" alt="avatar de ${personne.prenom} ${personne.nom}">
         <div class="card-body">
           <h5 class="card-title">${personne.prenom} ${personne.nom}</h5>
@@ -25,7 +25,7 @@ document.querySelector('#app').innerHTML = `
     ${nav}
 
     <div class="container-fluid mt-4">
-      <div class="d-flex gap-3 flex-wrap">
+      <div class="d-flex gap-3 flex-wrap justify-content-center">
         ${listePersonnes()}
       </div>
     </div>
