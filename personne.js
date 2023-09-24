@@ -10,6 +10,7 @@ const detailsPersonne = () => {
   const personneId = urlParams.get('id');
   console.log(personneId);
 
+  // on cherche la personne qui possède l'id trouvé dans l'url
   const personne = data.find((personne) => {
     return personne.id === Number.parseInt(personneId);
   });
