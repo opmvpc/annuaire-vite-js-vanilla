@@ -1,7 +1,7 @@
 import * as bootstrap from 'bootstrap';
-import './style.scss';
-import { data } from './data';
-import { nav } from './nav';
+import '../style.scss';
+import { data } from '../data';
+import { nav } from '../nav';
 
 const detailsPersonne = () => {
   // récupération des paramètres GET de l'url
