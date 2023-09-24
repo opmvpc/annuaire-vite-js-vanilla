@@ -24,7 +24,7 @@ document.querySelector('#app').innerHTML = `
   <main>
     ${nav}
 
-    <div class="container-fluid mt-4">
+    <div class="container-fluid my-4">
       <div class="d-flex gap-3 flex-wrap justify-content-center">
         ${listePersonnes()}
       </div>

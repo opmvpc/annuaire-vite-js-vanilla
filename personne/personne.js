@@ -33,7 +33,7 @@ document.querySelector('#app').innerHTML = `
   <main>
     ${nav}
 
-    <div class="container-fluid mt-4">
+    <div class="container-fluid my-4">
       ${detailsPersonne()}
     </div>
   </main>
