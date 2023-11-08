@@ -1,12 +1,32 @@
-import * as bootstrap from 'bootstrap';
-import './style.scss';
-import { data } from './data';
-import { nav } from './nav';
+import * as bootstrap from "bootstrap";
+import "./style.scss";
+import { data } from "./data";
+import { nav } from "./nav";
 
 const listePersonnes = () => {
-  let html = '';
-  for (let i = 0; i < data.length; i++) {
-    const personne = data[i];
+  let html = "";
+
+  let filteredData = Array.from(data);
+
+  const q = new URL(window.location).searchParams.get("q")?.toLowerCase();
+
+  if (q !== null && q !== undefined) {
+    filteredData = filteredData.filter(
+      (p) =>
+        p.nom.toLowerCase().includes(q) ||
+        p.prenom.toLowerCase().includes(q) ||
+        p.adresse_email.toLowerCase().includes(q)
+    );
+  }
+
+  filteredData
+    .sort((p1, p2) =>
+      `${p1.prenom} ${p1.nom}`.localeCompare(`${p2.prenom} ${p2.nom}`)
+    )
+    .reverse();
+
+  for (let i = 0; i < filteredData.length; i++) {
+    const personne = filteredData[i];
     let personneCard = `
       <a class="card col-5 col-md-3" href="/personne/?id=${personne.id}">
         <img src="${personne.avatar}" class="card-img-top" alt="avatar de ${personne.prenom} ${personne.nom}">
@@ -20,14 +40,30 @@ const listePersonnes = () => {
   return html;
 };
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <main>
     ${nav}
 
+    <input type="search" id="search">
+
     <div class="container-fluid my-4">
-      <div class="d-flex gap-3 flex-wrap justify-content-center">
+      <div id="liste-personnes" class="d-flex gap-3 flex-wrap justify-content-center">
         ${listePersonnes()}
       </div>
     </div>
   </main>
 `;
+
+const searchInput = document.querySelector("#search");
+const q = new URL(window.location).searchParams.get("q");
+if (q !== null && q !== undefined) {
+  searchInput.value = q;
+}
+
+searchInput.addEventListener("input", (event) => {
+  const url = new URL(window.location);
+  url.searchParams.set("q", event.target.value);
+  window.history.pushState({}, "", url);
+  const liste = document.querySelector("#liste-personnes");
+  liste.innerHTML = listePersonnes();
+});
